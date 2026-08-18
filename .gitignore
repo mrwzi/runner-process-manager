@@ -1,0 +1,36 @@
+# Local Python/build environments
+.build-venv/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Runner user data and live logs
+.runner_runtime/
+logs/*
+!logs/.gitkeep
+*.log
+
+# Generated build products
+dist/
+installer/
+build/Runner/
+build/UpdateRunner/
+build/specs/
+Runner.exe
+UpdateRunner.exe
+*.spec
+
+# Tool/editor and operating-system files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+screenshots/Screenshot *.png
+
+# Redundant source asset (identical to runner_icon.ico)
+assets/runner_icon_transparent.ico
