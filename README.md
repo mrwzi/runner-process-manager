@@ -4,6 +4,10 @@ Runner is a lightweight Windows process manager for local applications. It can l
 
 ![Runner overview with Python, Node.js, and Batch apps running](screenshots/runner-ui-overview.png)
 
+## Download
+
+Download the installer from [Releases](https://github.com/mrwzi/Runner/releases/latest), or use the visible repository copy at [`installer/RunnerSetup.exe`](installer/RunnerSetup.exe).
+
 ## Screenshots
 
 | Search and filtering | Intentional stop handling |
