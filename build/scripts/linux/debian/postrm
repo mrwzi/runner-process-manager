@@ -1,0 +1,7 @@
+#!/bin/sh
+# Deliberately retain /var/lib/runner on remove and purge. It may contain a
+# node identity, pairing secrets, logs, and synchronized applications. An
+# operator must explicitly remove it after transferring cluster ownership.
+set -e
+systemctl daemon-reload || true
+exit 0

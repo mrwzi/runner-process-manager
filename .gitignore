@@ -13,8 +13,8 @@ logs/*
 
 # Generated build products
 dist/
-installer/*
-!installer/RunnerSetup.exe
+release/
+build/temp/
 build/Runner/
 build/UpdateRunner/
 build/specs/

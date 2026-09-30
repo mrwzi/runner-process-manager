@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+exec /usr/bin/python3 /opt/runner/launcher/agent_cli.py "$@"

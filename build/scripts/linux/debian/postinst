@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+case "$1" in
+  configure)
+    if ! getent passwd runner >/dev/null; then
+      adduser --system --group --home /var/lib/runner --no-create-home runner
+    fi
+    install -d -o runner -g runner -m 0700 /var/lib/runner /var/lib/runner/logs /var/lib/runner/deployments
+    # Generate the machine-local identity before the first service start. The
+    # identity store is idempotent, so upgrades retain the existing identity.
+    runuser -u runner -- /usr/bin/runner-agent status >/dev/null 2>&1 || true
+    systemctl daemon-reload || true
+    systemctl enable runner-agent.service || true
+    systemctl restart runner-agent.service || true
+  ;;
+esac
+exit 0
